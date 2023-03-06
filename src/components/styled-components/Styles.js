@@ -49,13 +49,15 @@ export const CardIconContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  p {
-    color: #949494;
-    text-align: center;
-    font-size: 1.4vw;
-    line-height: 0;
-  }
+  
 `;
+
+export const WeatherSignature = styled.p`
+  color: #949494;
+  text-align: center;
+  font-size: 1.4vw;
+  line-height: 0;
+`
 
 export const SvgContainer = styled.div`
   width: 60%;
@@ -71,16 +73,40 @@ export const SvgContainer = styled.div`
 export const CardFooter = styled.div`
   height: 35%;
   width: 100%;
-  border: #333333 1px solid;
   display: flex;
 `;
 
 export const PropertiesContainer = styled.div`
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-evenly;
+  padding-left: 10%;
+
 `;
 
 export const TemperatureContainer = styled.div`
   width: 50%;
   height: 100%;
-`;
+  color: #ececec;
+  display: flex;
+  `;
+export const TemperatureP = styled.p`
+  place-self: center;
+  margin: auto auto;
+  font-size: 4.5vw;
+
+`
+export const WindContainer = styled.div`
+  color: #ececec;
+  display: flex;
+  gap: 10%;
+`
+
+export const HumidityContainer = styled.div`
+  color: #ececec;
+  display: flex;
+  gap: 10%;
+`
