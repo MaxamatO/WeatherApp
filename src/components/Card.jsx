@@ -1,24 +1,16 @@
-import React from "react";
-import { ReactComponent as SunnySVG } from "../assets/sunny.svg";
-import { ReactComponent as WindPropSVG } from "../assets/windprop.svg";
-import { ReactComponent as HumidityPropSVG } from "../assets/humidityprop.svg";
+import React, { useState } from "react";
+
 import {
   CardWrapper,
   CardHeader,
-  CardIconContainer,
-  CardFooter,
-  WindContainer,
-  HumidityContainer,
   CountryHour,
   CountryInput,
-  PropertiesContainer,
-  SvgContainer,
-  TemperatureContainer,
-  TemperatureP,
-  WeatherSignature,
 } from "./styled-components/Styles";
+import WeatherInfo from "./WeatherInfo";
 
 const Card = () => {
+  const [countryHour, setCountryHour] = useState(null);
+
   return (
     <>
       <CardWrapper>
@@ -26,27 +18,7 @@ const Card = () => {
           <CountryInput></CountryInput>
           <CountryHour>15:00</CountryHour>
         </CardHeader>
-        <CardIconContainer>
-          <SvgContainer>
-            <SunnySVG></SunnySVG>
-          </SvgContainer>
-          <WeatherSignature>Sunny</WeatherSignature>
-        </CardIconContainer>
-        <CardFooter>
-          <PropertiesContainer>
-            <WindContainer>
-              <WindPropSVG></WindPropSVG>
-              15km/h
-            </WindContainer>
-            <HumidityContainer>
-              <HumidityPropSVG></HumidityPropSVG>
-              80%
-            </HumidityContainer>
-          </PropertiesContainer>
-          <TemperatureContainer>
-            <TemperatureP>39°</TemperatureP>
-          </TemperatureContainer>
-        </CardFooter>
+        <WeatherInfo temp="20" mainSVG="Sunny"></WeatherInfo>
       </CardWrapper>
     </>
   );
