@@ -20,6 +20,7 @@ const components = {
 
 const WeatherInfo = (props) => {
   const SpecificMainSVG = components[props.mainSVG];
+
   return (
     <>
       <CardIconContainer>
@@ -32,7 +33,7 @@ const WeatherInfo = (props) => {
         <PropertiesContainer>
           <WindContainer>
             <WindPropSVG />
-            {props.windSpeed}
+            {props.windSpeed} km/h
           </WindContainer>
           <HumidityContainer>
             <HumidityPropSVG />
